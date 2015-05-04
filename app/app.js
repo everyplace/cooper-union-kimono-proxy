@@ -26,16 +26,11 @@ app.configure('development', function(){
 
 //configure routes
 app.get('/', routes.index);
-// app.get('/weather/:state/:city', routes.weather);
-// app.get('/search/tag/:search', routes.json, routes.instagram_search);
-app.get('/search/location/:lat/:long', routes.json, routes.instagram_location);
-app.get('/search/user/:username', routes.json, routes.instagram_user_search);
-app.get('/search/tag/:tag', routes.json, routes.instagram_tag_media_recent);
-app.get('/user/:username', routes.json, routes.instagram_user_info);
-app.get('/search/venue/:id', routes.json, routes.instagram_location_venue);
+app.get('/api/:endpoint', routes.json, routes.kimono);
+
 
 
 //initiate the app server
 http.createServer(app).listen(app.get('port'), function(){
-  console.log("cooper-union-weather-proxy running on port " + app.get('port'));
+  console.log("cooper-union-kimono-proxy running on port " + app.get('port'));
 });
