@@ -1,1 +1,1 @@
-#Cooper Union Weather Proxy
+#Cooper Union Kimono Labs Proxy
